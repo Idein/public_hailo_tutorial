@@ -1,0 +1,43 @@
+{
+    "$schema": "https://actcast.io/schema/v8/setting_schema_schema.json",
+    "type": "object",
+    "properties": {
+        "display": {
+            "title": "display",
+            "description": "output video to HDMI display",
+            "descriptions": {
+                "ja": "HDMIディスプレイへの描画を行う"
+            },
+            "type": "boolean",
+            "default": false
+        },
+        "camera_mode": {
+            "title": "camera module/usb",
+            "description": "use module camera, usb camera",
+            "descriptions": {
+                "ja": "使用するカメラ"
+            },
+            "type": "string",
+            "enum": [
+                "module",
+                "usb"
+            ],
+            "default": "module"
+        },
+        "thresh": {
+            "title": "object detection thresh",
+            "description": "object detection thresh",
+            "descriptions": {
+                "ja": "この閾値より大きい確率で検出された時に、画面に表示されます"
+            },
+            "type": "number",
+            "default": 0.5,
+            "minimum": 0.1,
+            "maximum": 1
+        }
+    },
+    "required": [
+        "display",
+        "thresh"
+    ]
+}

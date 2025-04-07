@@ -13,7 +13,7 @@ def main():
     # Load act setting
     settings = app.get_settings({
         'display': True,
-        "camera_mode": "usb",
+        "camera_mode": "module",
         'thresh': 0.35
     })
     cmd = actfw_core.CommandServer()
