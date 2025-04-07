@@ -1,0 +1,1 @@
+gcc -W -Wall -Wextra -Werror -O2 -pipe -fPIC -std=c99 -I src src/model.c -mcpu=arm1176jzf-s -mfpu=vfp -mfloat-abi=hard -shared -o yolox_tiny.so -lhailort -lpthread -lm
